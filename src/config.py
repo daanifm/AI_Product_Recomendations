@@ -13,7 +13,7 @@ def init_client():
     This function sets up the API key and configures the client for use.
     """
     # Initialize ChromaDB client
-    api_key = "AIzaSyAv7fekn85pn48vzYYLjqIx0bpL90CsTZU"
+    api_key = "your api key"
     genai.configure(api_key=api_key)
 
     model = genai.GenerativeModel('gemini-2.0-flash')
