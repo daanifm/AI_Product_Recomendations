@@ -93,7 +93,7 @@ def launch_gradio_interface(client):
     with gr.Blocks(title="My Custom Chatbot") as demo:
         gr.HTML(chatbot_css)
         gr.Markdown("# 🤖 AI Product Recommendations", elem_id="header")
-        chatbot = gr.Chatbot(elem_id="chatbot")
+        chatbot = gr.Chatbot(elem_id="chatbot",type="messages")
         
         with gr.Row(elem_id="input_container"):
             with gr.Column(elem_classes=["input-wrapper"]):
@@ -117,4 +117,4 @@ def launch_gradio_interface(client):
             outputs=[chatbot, chatbot]
         )
     
-    demo.launch()
+    demo.launch(server_name="0.0.0.0", server_port=7860)

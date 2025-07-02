@@ -4,6 +4,7 @@
     Client to interact with the Google Gemini API using HTTP requests.
 """
 import google.generativeai as genai
+import os
 
 
 
@@ -13,7 +14,8 @@ def init_client():
     This function sets up the API key and configures the client for use.
     """
     # Initialize ChromaDB client
-    api_key = "your api key"
+
+    api_key = os.getenv("API_KEY")
     genai.configure(api_key=api_key)
 
     model = genai.GenerativeModel('gemini-2.0-flash')
