@@ -26,10 +26,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t daanifmrecomendador:latest .
+        run: docker build -t daanifm/recomendador:latest .
 
       - name: Push Docker image
-        run: docker push daanifmrecomendador:latest
+        run: docker push daanifm/recomendador:latest
+
 
       # Opcional: correr contenedor para pruebas básicas
       - name: Run container (test)
